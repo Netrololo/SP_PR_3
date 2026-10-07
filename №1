@@ -1,0 +1,8 @@
+a = float(input("делимое "))
+b = float(input("делитель "))
+
+if b == 0:
+    print("деление на ноль")
+else:
+    res = a / b
+    print(f"частное {res}")
