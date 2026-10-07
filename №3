@@ -1,0 +1,15 @@
+print("Введите координаты вершин")
+xa, ya = map(float, input("A (x y) ").split())
+xb, yb = map(float, input("B (x y) ").split())
+xc, yc = map(float, input("C (x y) ").split())
+xd, yd = map(float, input("D (x y) ").split())
+
+z1 = (xb - xa) * (yc - yb) - (yb - ya) * (xc - xb)
+z2 = (xc - xb) * (yd - yc) - (yc - yb) * (xd - xc)
+z3 = (xd - xc) * (ya - yd) - (yd - yc) * (xa - xd)
+z4 = (xa - xd) * (yb - ya) - (ya - yd) * (xb - xa)
+
+if (z1 > 0 and z2 > 0 and z3 > 0 and z4 > 0) or (z1 < 0 and z2 < 0 and z3 < 0 and z4 < 0):
+    print("Четырехугольник является выпуклым.")
+else:
+    print("Четырехугольник является невыпуклым")
